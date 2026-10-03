@@ -4,7 +4,9 @@ function NotFound() {
     return (
         <>
             <NavBar />
-            <h1>404 Page Not Found</h1>
+            <main>
+                <h1>404 Page Not Found</h1>
+            </main>
         </>
     )
 }

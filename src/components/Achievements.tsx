@@ -4,7 +4,9 @@ function Achievements() {
     return (
         <>
             <NavBar />
-            <h1>Achievements</h1>
+            <main>
+                <h1>Achievements</h1>
+            </main>
         </>
     )
 }

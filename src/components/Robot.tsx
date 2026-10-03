@@ -4,7 +4,9 @@ function Robot() {
     return (
         <>
             <NavBar />
-            <h1>Robot</h1>
+            <main>
+                <h1>Robot</h1>
+            </main>
         </>
     )
 }
