@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 
 function Model() {
     const { scene } = useGLTF('/models/pcbv2.glb');
-    return <primitive object={scene} scale={1.5} position={[0, 0, 0]} />;
+    return <primitive object={scene} scale={15} position={[0, 0, 0]} />;
 }
 
 function Robot() {
@@ -14,7 +14,7 @@ function Robot() {
             <NavBar />
             <main>
                 <h1>Robot</h1>
-                <div style={{ width: '100vw', height: '100vh' }}>
+                <div style={{ width: '100%', height: '100%'}}>
                     <Canvas camera={{ position: [0, 2, 5], fov: 45 }}>
                         <ambientLight intensity={0.5} />
 
