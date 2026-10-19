@@ -14,7 +14,7 @@ function Robot() {
             <NavBar />
             <main>
                 <h1>Robot</h1>
-                <div style={{ width: '100%', height: '100%'}}>
+                <div style={{ width: '100%', height: '100vh'}}>
                     <Canvas camera={{ position: [0, 2, 5], fov: 45 }}>
                         <ambientLight intensity={0.5} />
 
