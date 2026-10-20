@@ -34,7 +34,8 @@
     "react-router-dom": "^7.18.4",
     "three": "^0.186.1",
     "@react-three/fiber": "^9.8.2",
-    "@react-three/drei": "^10.7.9"
+    "@react-three/drei": "^10.7.9",
+    "sass-embedded": "^1.105.2"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.2.5"
