@@ -1,37 +1,16 @@
 import NavBar from "./NavBar.tsx";
-import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
-
-function Model() {
-    const { scene } = useGLTF('/models/pcbv2.glb');
-    return <primitive object={scene} scale={15} position={[0, 0, 0]} />;
-}
+import ScrollRotateModel from "./ScrollRotateModel.tsx"
 
 function Robot() {
-    return (
-        <>
-            <NavBar />
-            <main>
-                <h1>Robot</h1>
-                <div style={{ width: '100%', height: '100vh'}}>
-                    <Canvas camera={{ position: [0, 2, 5], fov: 45 }}>
-                        <Environment preset="city" />
-                        <hemisphereLight
-                            args={["#ffffff", "#bbbbbb", 1.0]}
-                        />
-                        <directionalLight position={[0, -10, 0]} intensity={0.8} />
-
-                        <Suspense fallback={null}>
-                            <Model />
-                        </Suspense>
-
-                        <OrbitControls enableZoom={true} />
-                    </Canvas>
-                </div>
-            </main>
-        </>
-    )
+  return (
+    <>
+      <NavBar />
+      <ScrollRotateModel url="/models/pcbv2.glb" scrollScreens={2} axis="y" size={2.5} tilt={15} />
+      <main>
+        <h1>Robot Design</h1>
+      </main>
+    </>
+  )
 }
 
 export default Robot;
