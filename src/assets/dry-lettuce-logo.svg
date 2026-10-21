@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-label="Dry Lettuce">
+  <defs>
+    <radialGradient id="leaf" cx="50%" cy="55%" r="62%">
+      <stop offset="0%" stop-color="#7FB347"/>
+      <stop offset="55%" stop-color="#A9C25A"/>
+      <stop offset="100%" stop-color="#FAB855"/>
+    </radialGradient>
+    <style>
+      .word { fill: #F5F0E6; font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      .amber { fill: #FAB855; font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      .sub  { fill: #A8A39A; font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- icon -->
+  <g>
+    <rect x="94" y="164" width="12" height="26" rx="4" fill="#C98A2B"/>
+    <path d="M100 18 C120 22 128 34 142 36 C158 38 168 52 166 66 C176 78 178 96 168 108 C174 124 164 140 150 146 C146 162 130 172 114 170 C106 180 94 180 86 170 C70 172 54 162 50 146 C36 140 26 124 32 108 C22 96 24 78 34 66 C32 52 42 38 58 36 C72 34 80 22 100 18 Z"
+          fill="url(#leaf)" stroke="#C98A2B" stroke-width="3" stroke-linejoin="round"/>
+    <g fill="none" stroke="#101010" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M100 176 V40"/>
+      <path d="M100 128 L72 100 V78"/>
+      <path d="M100 100 L128 72 V56"/>
+      <path d="M100 150 L66 128 H52"/>
+      <path d="M100 140 L132 112 H148"/>
+    </g>
+    <g fill="#101010">
+      <circle cx="100" cy="36" r="5.5"/><circle cx="72" cy="74" r="5.5"/><circle cx="128" cy="52" r="5.5"/>
+      <circle cx="48" cy="128" r="5.5"/><circle cx="152" cy="112" r="5.5"/>
+    </g>
+    <g fill="#FAB855">
+      <circle cx="100" cy="36" r="2"/><circle cx="72" cy="74" r="2"/><circle cx="128" cy="52" r="2"/>
+      <circle cx="48" cy="128" r="2"/><circle cx="152" cy="112" r="2"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <text class="word" x="215" y="100" font-size="76" font-weight="800">Dry</text>
+  <text class="amber" x="217" y="152" font-size="46" font-weight="600" letter-spacing="9">LETTUCE</text>
+  <text class="sub" x="219" y="180" font-size="14" font-weight="600" letter-spacing="3">ROBOCUPJUNIOR RESCUE</text>
+</svg>

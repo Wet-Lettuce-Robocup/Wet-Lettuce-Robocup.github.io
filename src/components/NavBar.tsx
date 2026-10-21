@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/NavBar.scss"
+import logo from "../assets/dry-lettuce-logo.svg"
 
 function NavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -29,47 +30,53 @@ function NavBar() {
   };
 
   return (
-    <nav aria-label="Main Navigation" className="navbar" onKeyDown={handleKeyDown}>
-      <div className={"nav-logo"}>
-        <NavLink to="/">Dry Lettuce</NavLink>
-      </div>
+    <>
+      <nav aria-label="Main Navigation" className="navbar" onKeyDown={handleKeyDown}>
+        <div className={"nav-logo"}>
+          <img src={logo} />
+        </div>
 
-      <ul className="nav-links">
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/team">Team</NavLink>
-        </li>
-        <li>
-          <NavLink to="/robot">Robot</NavLink>
-        </li>
-        <li>
-          <NavLink to="/achievements">Achievements</NavLink>
-        </li>
-        <li className="dropdown-item" ref={dropdownRef}>
-          <button
-            className="dropdown-trigger"
-            onClick={toggleDropdown}
-            aria-expanded={isDropdownOpen}
-            aria-haspopup="menu"
-            aria-controls="documentation-menu"
-          >
-            Documentation <span className="arrow" aria-hidden="true">▼</span>
-          </button>
+        <ul className="nav-links">
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/team">Team</NavLink>
+          </li>
+          <li>
+            <NavLink to="/robot">Robot</NavLink>
+          </li>
+          <li>
+            <NavLink to="/achievements">Achievements</NavLink>
+          </li>
+          <li>
+            <a href="https://github.com/wet-lettuce-robocup">GitHub</a>
+          </li>
+          <li className="dropdown-item" ref={dropdownRef}>
+            <button
+              className="dropdown-trigger"
+              onClick={toggleDropdown}
+              aria-expanded={isDropdownOpen}
+              aria-haspopup="menu"
+              aria-controls="documentation-menu"
+            >
+              Documentation <span className="arrow" aria-hidden="true">▼</span>
+            </button>
 
-          {/* Conditional Dropdown List */}
-          {isDropdownOpen && (
-            <ul id="documentation-menu" className="dropdown-menu" role="menu">
-              <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/robot_core/#" role="menuitem">Robot Core</a></li>
-              <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/robot_msgs/#" role="menuitem">Robot Messages</a></li>
-              <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/line_follow/#" role="menuitem">Line Follow</a></li>
-              <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/ml_rescue/#" role="menuitem">Rescue</a></li>
-            </ul>
-          )}
-        </li>
-      </ul>
-    </nav>
+            {/* Conditional Dropdown List */}
+            {isDropdownOpen && (
+              <ul id="documentation-menu" className="dropdown-menu" role="menu">
+                <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/robot_core/#" role="menuitem">Robot Core</a></li>
+                <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/robot_msgs/#" role="menuitem">Robot Messages</a></li>
+                <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/line_follow/#" role="menuitem">Line Follow</a></li>
+                <li role="none"><a href="https://wet-lettuce-robocup.github.io/robocup-ros/ml_rescue/#" role="menuitem">Rescue</a></li>
+              </ul>
+            )}
+          </li>
+        </ul>
+      </nav>
+      <div id="nav-divider" />
+    </>
   )
 }
 
