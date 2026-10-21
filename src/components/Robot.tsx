@@ -1,6 +1,7 @@
 import NavBar from "./NavBar.tsx";
 import ScrollRotateModel from "./ScrollRotateModel.tsx"
 import "../styles/Robot.scss"
+import Footer from "./Footer.tsx";
 
 function Robot() {
   return (
@@ -15,6 +16,7 @@ function Robot() {
       <main>
         <h1>Robot Design</h1>
       </main>
+      <Footer />
     </>
   )
 }

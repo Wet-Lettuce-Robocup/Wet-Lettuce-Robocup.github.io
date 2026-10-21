@@ -1,0 +1,19 @@
+$primary-color: #101010;   /* your existing near-black */
+$accent-color:  #FAB855;   /* your existing amber */
+
+/* Backgrounds / surfaces */
+$surface-color:   #1A1A1A; /* cards, nav bar */
+$surface-raised:  #242424; /* hover states, table rows */
+$border-color:    #2E2E2E;
+
+/* Text */
+$text-color:      #F5F0E6; /* warm off-white, softer than pure white */
+$text-muted:      #A8A39A; /* captions, secondary text */
+
+/* Secondary accent: the "lettuce" */
+$leaf-color:      #7FB347; /* tags, success states, secondary buttons */
+$leaf-light:      #A9C25A;
+
+/* Amber variants */
+$accent-hover:    #FFCB7D; /* lighter, for hover */
+$accent-deep:     #C98A2B; /* borders, pressed states */
