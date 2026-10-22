@@ -1,5 +1,6 @@
 import NavBar from "./NavBar.tsx";
 import Footer from "./Footer.tsx";
+import { NavLink } from "react-router-dom";
 import "../styles/Home.scss";
 
 function Home() {
@@ -10,6 +11,12 @@ function Home() {
         <section className="hero-banner">
           <img src="/images/thumbnail.jpg" alt="The robot following a line." className="hero-background" role="presentation" />
           <div className="hero-content">
+            <h1>Dry Lettuce</h1>
+            <p>A student-built robot, designed from scratch, for RoboCup Junior Rescue Line.</p>
+          </div>
+          <div className="interact-links">
+            <NavLink to="/robot">Meet the Robot</NavLink>
+            <NavLink to="/team">Meet the Team</NavLink>
           </div>
         </section>
         <section className="description">
