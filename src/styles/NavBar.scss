@@ -1,10 +1,12 @@
+@use 'variables' as *;
+
 /* Base Layout */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: var(--surface-color);
+    background-color: $surface-color;
     color: white;
     position: fixed;
     width: 100%;
@@ -31,12 +33,12 @@
     align-items: center;
 
     a[aria-current="page"] {
-        color: var(--accent-color);
+        color: $accent-color;
     }
 }
 
 .nav-links a:hover, .dropdown-trigger:hover {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .nav-links a, .dropdown-trigger {
@@ -72,7 +74,7 @@
       padding: 0.5rem 1rem;
 
       &:hover {
-        color: var(--accent-color);
+        color: $accent-color;
         outline: none;
       }
     }

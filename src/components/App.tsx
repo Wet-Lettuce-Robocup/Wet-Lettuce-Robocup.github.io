@@ -1,10 +1,10 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'
-import Home from './components/Home';
-import Team from './components/Team';
-import Robot from './components/Robot';
-import Achievements from "./components/Achievements.tsx";
-import NotFound from "./components/NotFound.tsx";
+import '../styles/App.scss'
+import Home from './Home.tsx';
+import Team from './Team.tsx';
+import Robot from './Robot.tsx';
+import Achievements from "./Achievements.tsx";
+import NotFound from "./NotFound.tsx";
 
 function App() {
   return (
