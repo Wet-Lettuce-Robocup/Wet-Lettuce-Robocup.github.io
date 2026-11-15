@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+.team-title {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 5rem;
+}
+
+.team-photo {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.team-story {
+  padding: 3rem;
+}
+
+.cards__team {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 2rem;
+
+  .card__team {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style-position: inside;
+
+    img {
+      height: 400px;
+    }
+
+    .member-details {
+      padding: 2rem;
+    }
+  }
+}
