@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .model-label{
   position: absolute;
   top: 6rem;
@@ -15,10 +17,63 @@
   background-color: red;
 }
 
-.test-divider {
-  height: 100rem;
+.overview {
+  padding: 3rem 3rem 0;
+
+  p {
+    margin-top: 1.5rem;
+  }
+}
+
+#mechanical-design {
+  padding: 3rem 3rem 0;
+  
+  h2 {
+    margin-top: 1rem;
+  }
+}
+
+#electronics {
+  padding: 3rem 3rem 0;
+
+  h2, h3 {
+    margin-top: 1rem;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+  }
+
+  th {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    background-color: $surface-raised;
+  }
+
+  td {
+    padding: 0.5rem;
+  }
+
+  th, td {
+    border-bottom: 1px $surface-raised solid;
+  }
+
+  tr:hover {
+    background-color: $surface-raised;
+  }
 }
 
 #software {
   list-style-position: inside;
+  margin: 3rem 3rem 0;
+
+  li {
+    margin-top: 1.5rem;
+  }
 }
+
+.test-divider {
+  height: 100rem;
+}
+
