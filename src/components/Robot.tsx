@@ -124,14 +124,47 @@ function Robot() {
         <section id="software">
           <h1>Software</h1>
           <h2>How the robot thinks</h2>
-          <ol>
+          <ol className="how-robot-thinks">
             <li>State machine reads the on-button and switches between idle and line follow/rescue by enabling or disabling lifecycle nodes. It also listens for line follow or rescue finishing so it can switch modes or end the round.</li>
             <li>Line following: the navigation node processes the down-facing camera and publishes line error → the PID loop turns that into steering on /cmd_vel.</li>
             <li>Motor control: the twist subscriber turns /cmd_vel into commands for the STM32, and the odom publisher returns encoder data on /odom.</li>
             <li>Rescue: the ML model detects victims, then the robot navigates to them and to evacuation points, operates the claw and ball ramp, and leaves the zone.</li>
           </ol>
+          <h2>Tools & technologies</h2>
+          <div className="tools-technologies marquee-container">
+            <div className="marquee-track">
+              <ul className="marquee-list">
+                <li>ROS2</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Docker</li>
+                <li>OpenCV</li>
+                <li>YOLOv8</li>
+                <li>CVAT/Roboflow</li>
+                <li>Hailo software suite</li>
+                <li>KiCad</li>
+                <li>Fusion 360</li>
+                <li>Microsoft Planner</li>
+                <li>GitHub</li>
+              </ul>
+
+              <ul className="marquee-list" aria-hidden="true">
+                <li>ROS2</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Docker</li>
+                <li>OpenCV</li>
+                <li>YOLOv8</li>
+                <li>CVAT/Roboflow</li>
+                <li>Hailo software suite</li>
+                <li>KiCad</li>
+                <li>Fusion 360</li>
+                <li>Microsoft Planner</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </div>
         </section>
-        <div className="test-divider" />
       </main>
       <Footer />
     </>

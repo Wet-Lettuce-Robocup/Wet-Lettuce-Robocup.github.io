@@ -68,12 +68,59 @@
   list-style-position: inside;
   margin: 3rem 3rem 0;
 
-  li {
-    margin-top: 1.5rem;
+  h2 {
+    margin-top: 1rem;
+  }
+
+  .how-robot-thinks {
+    li {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .tools-technologies {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    color: $accent-color;
   }
 }
 
-.test-divider {
-  height: 100rem;
+.marquee-container {
+  width: 100%;
+  overflow: hidden; /* Hides the overflowing items */
+  /* Optional: fades the left and right edges smoothly */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
+.marquee-track {
+  display: flex;
+  width: max-content; /* Ensures the track fits both lists side-by-side */
+  animation: scroll-left 30s linear infinite; /* */
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0 2rem 0 0; /* Must match the 'gap' value so the seam is invisible */
+  gap: 2rem; /* */
+
+  li {
+    white-space: nowrap; /* Prevents text inside items from wrapping */
+    flex-shrink: 0; /* Prevents items from squishing */
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0); /* */
+  }
+  100% {
+    transform: translateX(-50%); /* Moves exactly half the track (one full list) */
+  }
+}
