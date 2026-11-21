@@ -12,7 +12,7 @@ import {
   FusionOriginal,
   RosOriginal,
 } from "devicons-react";
-import { FaRobot, FaEye, FaMicrochip, FaCube } from "react-icons/fa";
+import { FaEye, FaMicrochip } from "react-icons/fa";
 import { MdLabelOutline } from "react-icons/md";
 import { TbCircuitResistor } from "react-icons/tb";
 
