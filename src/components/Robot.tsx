@@ -9,13 +9,15 @@ import {
   DockerOriginal,
   OpencvOriginal,
   GithubOriginal,
+  FusionOriginal,
+  RosOriginal,
 } from "devicons-react";
 import { FaRobot, FaEye, FaMicrochip, FaCube } from "react-icons/fa";
 import { MdLabelOutline } from "react-icons/md";
 import { TbCircuitResistor } from "react-icons/tb";
 
 const techStack = [
-  { name: "ROS2", icon: <FaRobot size={24} color="#22314E" /> },
+  { name: "ROS2", icon: <RosOriginal size={24} color="#22314E" /> },
   { name: "Python", icon: <PythonOriginal size={24} /> },
   { name: "C++", icon: <CplusplusOriginal size={24} /> },
   { name: "Docker", icon: <DockerOriginal size={24} /> },
@@ -24,7 +26,7 @@ const techStack = [
   { name: "CVAT/Roboflow", icon: <MdLabelOutline size={24} color="#6706CE" /> },
   { name: "Hailo software suite", icon: <FaMicrochip size={24} color="#00A8E8" /> },
   { name: "KiCad", icon: <TbCircuitResistor size={24} color="#314CB0" /> },
-  { name: "Fusion 360", icon: <FaCube size={24} color="#FF6A00" /> },
+  { name: "Fusion 360", icon: <FusionOriginal size={24} /> },
   { name: "GitHub", icon: <GithubOriginal size={24} /> },
 ];
 
@@ -164,6 +166,7 @@ function Robot() {
         </section>
         <section id="software">
           <h1>Software</h1>
+          <img src="/images/interface-diagram.png" />
           <h2>How the robot thinks</h2>
           <ol className="how-robot-thinks">
             <li>State machine reads the on-button and switches between idle and line follow/rescue by enabling or disabling lifecycle nodes. It also listens for line follow or rescue finishing so it can switch modes or end the round.</li>
@@ -199,6 +202,10 @@ function Robot() {
               </ul>
             </div>
           </div>
+          <h1>Line follow</h1>
+          <p>This algorithm was created during the development of the robot, but was not used in the final competition due to insufficient time. It is shown here in its unfinished form as a proof of concept rather than a complete algorithm.</p>
+          <h2>Abstract</h2>
+          <p></p>
         </section>
       </main>
       <Footer />
