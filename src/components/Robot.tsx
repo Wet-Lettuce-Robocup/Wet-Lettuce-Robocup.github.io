@@ -3,6 +3,31 @@ import ScrollRotateModel from "./ScrollRotateModel.tsx"
 import "../styles/Robot.scss"
 import Footer from "./Footer.tsx";
 
+import {
+  PythonOriginal,
+  CplusplusOriginal,
+  DockerOriginal,
+  OpencvOriginal,
+  GithubOriginal,
+} from "devicons-react";
+import { FaRobot, FaEye, FaMicrochip, FaCube } from "react-icons/fa";
+import { MdLabelOutline } from "react-icons/md";
+import { TbCircuitResistor } from "react-icons/tb";
+
+const techStack = [
+  { name: "ROS2", icon: <FaRobot size={24} color="#22314E" /> },
+  { name: "Python", icon: <PythonOriginal size={24} /> },
+  { name: "C++", icon: <CplusplusOriginal size={24} /> },
+  { name: "Docker", icon: <DockerOriginal size={24} /> },
+  { name: "OpenCV", icon: <OpencvOriginal size={24} /> },
+  { name: "YOLOv8", icon: <FaEye size={24} color="#00FFFF" /> },
+  { name: "CVAT/Roboflow", icon: <MdLabelOutline size={24} color="#6706CE" /> },
+  { name: "Hailo software suite", icon: <FaMicrochip size={24} color="#00A8E8" /> },
+  { name: "KiCad", icon: <TbCircuitResistor size={24} color="#314CB0" /> },
+  { name: "Fusion 360", icon: <FaCube size={24} color="#FF6A00" /> },
+  { name: "GitHub", icon: <GithubOriginal size={24} /> },
+];
+
 function Robot() {
   return (
     <>
@@ -32,6 +57,22 @@ function Robot() {
         </section>
         <section id="electronics">
           <h1>Electronics</h1>
+          <div className="captioned-image">
+            <img src="/images/pcb/pcb-1.png" />
+            <h2>PCB</h2>
+          </div>
+          <div className="captioned-image">
+            <img src="/images/pcb/pcb-regulators.png" />
+            <h2>Voltage Regulators</h2>
+          </div>
+          <div className="captioned-image">
+            <img src="/images/pcb/pcb-stm32.png" />
+            <h2>STM32</h2>
+          </div>
+          <div className="captioned-image">
+            <img src="/images/pcb/pcb-usb-port.png" />
+            <h2>USB Controller</h2>
+          </div>
           <table>
             <thead>
               <tr>
@@ -134,33 +175,27 @@ function Robot() {
           <div className="tools-technologies marquee-container">
             <div className="marquee-track">
               <ul className="marquee-list">
-                <li>ROS2</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>Docker</li>
-                <li>OpenCV</li>
-                <li>YOLOv8</li>
-                <li>CVAT/Roboflow</li>
-                <li>Hailo software suite</li>
-                <li>KiCad</li>
-                <li>Fusion 360</li>
-                <li>Microsoft Planner</li>
-                <li>GitHub</li>
+                {techStack.map((item) => (
+                  <li
+                    key={item.name}
+                    style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </li>
+                ))}
               </ul>
 
               <ul className="marquee-list" aria-hidden="true">
-                <li>ROS2</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>Docker</li>
-                <li>OpenCV</li>
-                <li>YOLOv8</li>
-                <li>CVAT/Roboflow</li>
-                <li>Hailo software suite</li>
-                <li>KiCad</li>
-                <li>Fusion 360</li>
-                <li>Microsoft Planner</li>
-                <li>GitHub</li>
+                {techStack.map((item) => (
+                  <li
+                    key={item.name}
+                    style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

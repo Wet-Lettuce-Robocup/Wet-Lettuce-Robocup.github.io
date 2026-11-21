@@ -39,6 +39,10 @@
   h2, h3 {
     margin-top: 1rem;
   }
+  
+  img {
+    width: 100%;
+  }
 
   table {
     border-collapse: collapse;
@@ -122,5 +126,21 @@
   }
   100% {
     transform: translateX(-50%); /* Moves exactly half the track (one full list) */
+  }
+}
+
+.captioned-image {
+  position: relative;
+  width: 100%;
+
+  img {
+    z-index: 1;
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    z-index: 2;
   }
 }
