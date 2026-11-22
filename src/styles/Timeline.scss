@@ -1,0 +1,150 @@
+@use 'variables' as *;
+
+$line-width: 3px;
+$dot-size: 18px;
+$breakpoint: 768px;
+
+.timeline {
+  padding: 4rem 1rem;
+  color: $text-color;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    // The vertical line. Mobile: on the left. Desktop: down the centre.
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: ($dot-size / 2) - ($line-width / 2);
+      width: $line-width;
+      background: linear-gradient(to bottom, transparent, $border-color 5%, $border-color 95%, transparent);
+
+      @media (min-width: $breakpoint) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: $dot-size + 24px; // room for the line + dot on mobile
+    margin-bottom: 2.5rem;
+
+    // Hidden until scrolled into view (see the IntersectionObserver in the component)
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (min-width: $breakpoint) {
+      width: 50%;
+      padding-left: 0;
+
+      // Odd items: left of the line. Even items: right of the line.
+      &:nth-child(odd) {
+        padding-right: 3rem;
+        text-align: right;
+      }
+      &:nth-child(even) {
+        margin-left: 50%;
+        padding-left: 3rem;
+      }
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    background: var(--primary-color, #101010);
+    border: 3px solid $text-muted;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    @media (min-width: $breakpoint) {
+      .timeline__item:nth-child(odd) & {
+        left: auto;
+        right: -($dot-size / 2);
+      }
+      .timeline__item:nth-child(even) & {
+        left: -($dot-size / 2);
+      }
+    }
+  }
+
+  &__card {
+    padding: 1.25rem 1.5rem;
+    background: $surface-color;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  &__year {
+    display: block;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: $accent-color;
+  }
+
+  &__title {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  &__text {
+    margin: 0;
+    color: $text-muted;
+    line-height: 1.5;
+  }
+
+  // Hover on any item
+  &__item:hover {
+    .timeline__dot {
+      border-color: $accent-color;
+    }
+    .timeline__card {
+      border-color: $accent-color;
+      transform: translateY(-2px);
+    }
+  }
+
+  // Highlighted milestones (e.g. championship years)
+  &__item--highlight {
+    .timeline__dot {
+      background: $accent-color;
+      border-color: $accent-color;
+      box-shadow: 0 0 0 6px rgba(250, 184, 85, 0.2);
+    }
+    .timeline__card {
+      border-color: $accent-color;
+    }
+  }
+}
+
+// If someone has reduced motion on, skip the reveal animation
+@media (prefers-reduced-motion: reduce) {
+  .timeline__item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

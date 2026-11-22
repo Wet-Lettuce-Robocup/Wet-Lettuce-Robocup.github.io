@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+.achievements-title {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#results {
+  padding: 3rem 3rem 0;
+
+  table {
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+  }
+
+  th {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;;
+    background-color: $surface-raised;
+  }
+
+  td {
+    padding: 0.5rem;
+  }
+
+  th, td {
+    border-bottom: 1px $surface-raised solid;
+  }
+
+  tr:hover {
+    background-color: $surface-raised;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: $accent-color;
+  }
+}
+
+#timeline {
+  padding: 3rem 3rem 0;
+}
