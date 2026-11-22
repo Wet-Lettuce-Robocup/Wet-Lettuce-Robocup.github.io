@@ -37,20 +37,24 @@
       color: $text-color;
       font-size: 2rem;
       margin-bottom: 3rem;
+      width: 50%;
     }
   }
 
   .interact-links {
     position: absolute;
     bottom: 3rem;
-    left: 1rem;
+    left: 3rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    background-color: $surface-raised;
 
     a {
-      margin: 1rem;
-      padding: 1rem;
+      padding: 1rem 2rem;
       background-color: $surface-color;
-      height: 2rem;
-      border-radius: 2rem;
     }
   }
 }
